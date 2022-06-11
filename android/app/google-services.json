@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "208558685369",
+    "project_id": "pocfb-471c5",
+    "storage_bucket": "pocfb-471c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208558685369:android:d7d7abf233808d47c6af68",
+        "android_client_info": {
+          "package_name": "com.example.pocfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208558685369-mvvqrk03425l0u18svsm1e8lcliv2ql9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHlabdD5AdX9PzbE5rg-Y3-mADH0-6RZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208558685369-mvvqrk03425l0u18svsm1e8lcliv2ql9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "208558685369-554hbstrnjocm2rk6av0kirov2kq092l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pocfb"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
