@@ -34,7 +34,7 @@ class _AddDetailsState extends State<AddDetails> {
                       labelText: 'Enter Name', border: OutlineInputBorder()),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 15),
               SizedBox(
                 child: TextField(
                   controller: model.clgnameController,
@@ -43,6 +43,7 @@ class _AddDetailsState extends State<AddDetails> {
                       border: OutlineInputBorder()),
                 ),
               ),
+              const SizedBox(height: 15),
               SizedBox(
                 child: TextField(
                   controller: model.branchController,
@@ -50,6 +51,7 @@ class _AddDetailsState extends State<AddDetails> {
                       labelText: 'Enter Branch', border: OutlineInputBorder()),
                 ),
               ),
+              const SizedBox(height: 15),
               SizedBox(
                 child: TextField(
                   controller: model.yearController,
@@ -65,6 +67,7 @@ class _AddDetailsState extends State<AddDetails> {
                     child: const Text('Add',),
                     onPressed: () {
                       model.addtasktofirebase();
+                      Navigator.of(context).pop();
                     },
                   ))
             ],

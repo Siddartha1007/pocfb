@@ -1,12 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pocfb/view/auth_screen.dart';
 import 'package:pocfb/view/dashboard.dart';
-import 'dart:ui';
-
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp().then((_){
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +18,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: StreamBuilder(
-        // stream: FirebaseAuth.instance.onAuthStateChanged,
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, usersnapshot) {
           if (usersnapshot.hasData) {
@@ -28,13 +29,6 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
     );
-  //  return MaterialApp(
-  //     title: 'Flutter Demo',
-  //     theme: ThemeData(
-  //       primarySwatch: Colors.blue,
-  //     ),
-  //     home: AuthScreen(),
-  //   );
   }
 }
 

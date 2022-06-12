@@ -57,7 +57,10 @@ class _DashboardState extends State<Dashboard> {
               );
             } else {
               final docs = snapshot.data!.docs;
-              return ListView.builder(
+              return ListView.separated(
+                separatorBuilder: (context, index) => const Divider(
+                  color: Colors.black,
+                ),
                 itemCount: docs.length,
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -76,7 +79,7 @@ class _DashboardState extends State<Dashboard> {
                       margin: const EdgeInsets.only(bottom: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10)),
-                      height: 90,
+                      height: 30,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -87,10 +90,8 @@ class _DashboardState extends State<Dashboard> {
                                 Container(
                                     margin: const EdgeInsets.only(left: 20),
                                     child: Text(docs[index]['name'],
+                                    
                                        )),
-                                const SizedBox(
-                                  height: 5,
-                                ),
                               ]),
                           Container(
                               child: IconButton(
@@ -111,6 +112,7 @@ class _DashboardState extends State<Dashboard> {
                   );
                 },
               );
+              
             }
           },
         ),

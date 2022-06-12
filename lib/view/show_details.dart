@@ -23,20 +23,24 @@ class _ShowDetailsState extends State<ShowDetails> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.all(10),
-            child: Text(widget.name.toString(),),
+            margin: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.all(10),
+            child: Text("Name : "+ widget.name.toString(),),
           ),
           Container(
-            margin: EdgeInsets.all(10),
-            child: Text(widget.clgname.toString(),),
+            margin: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.all(10),
+            child: Text("ClgName : "+ widget.clgname.toString(),),
           ),
           Container(
-            margin: EdgeInsets.all(10),
-            child: Text(widget.branch.toString(),),
+            margin: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.all(10),
+            child: Text("Branch : "+ widget.branch.toString(),),
           ),
           Container(
-            margin: EdgeInsets.all(10),
-            child: Text(widget.year.toString(),),
+            margin: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.all(10),
+            child: Text("Year : "+ widget.year.toString(),),
           ),
         ],
       ),
